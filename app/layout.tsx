@@ -36,6 +36,17 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo.png', sizes: 'any', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon-32x32.png',
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'FloraMax 10-in-1 ফুলের বীজ কম্বো | Green Agri BD',
