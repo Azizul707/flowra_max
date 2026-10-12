@@ -15,6 +15,7 @@ import { GuaranteeSection } from '@/components/sections/GuaranteeSection';
 import { FaqSection } from '@/components/sections/FaqSection';
 import { CheckoutSection } from '@/components/sections/CheckoutSection';
 import { Footer } from '@/components/sections/Footer';
+import { StickyMobileBar } from '@/components/sections/StickyMobileBar';
 
 export default function HomePage() {
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#1b1c1a]">
+    <main className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#1b1c1a] pb-20 md:pb-0">
       {/* 1. Top Announcement Bar */}
       <TopAnnouncementBar />
 
@@ -83,6 +84,9 @@ export default function HomePage() {
 
       {/* 14. Footer with Copyright & Policy Links */}
       <Footer />
+
+      {/* 15. Persistent Bottom Mobile Bar (< 768px Thumb-Zone) */}
+      <StickyMobileBar />
     </main>
   );
 }

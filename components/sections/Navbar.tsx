@@ -63,10 +63,10 @@ export const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        {/* Right CTA Button */}
+        {/* Right CTA Button (Desktop only, mobile uses thumb-zone sticky bottom bar) */}
         <button
           onClick={scrollToCheckout}
-          className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-extrabold text-yellow-400 bg-[#1b4332] rounded-lg shadow-sm whitespace-nowrap font-sans-bengali transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-[0_10px_20px_rgba(26,71,49,0.4)] active:translate-y-0 active:scale-95"
+          className="hidden md:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-extrabold text-yellow-400 bg-[#1b4332] rounded-lg shadow-sm whitespace-nowrap font-sans-bengali transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-[0_10px_20px_rgba(26,71,49,0.4)] active:translate-y-0 active:scale-95"
         >
           <ShoppingBag className="w-4 h-4 text-yellow-400" />
           <span>অর্ডার করুন</span>

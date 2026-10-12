@@ -14,17 +14,33 @@ const hindSiliguri = Hind_Siliguri({
 });
 
 export const metadata: Metadata = {
-  title: 'গ্রীন এগ্রি বিডি | ১০ প্রজাতির প্রিমিয়াম ফুলের বীজ কম্বো প্যাক',
-  description: 'ছাদবাগান ও বারান্দার জন্য ৯৮% জার্মিনেশন গ্যারান্টি সহ ১০টি প্রিমিয়াম জাতের বিদেশি ও দেশি ফুলের বীজ কম্বো। সারা বাংলাদেশে ক্যাশ অন ডেলিভারি।',
+  title: 'FloraMax 10-in-1 ফুলের বীজ কম্বো | Green Agri BD',
+  description: 'ছাদবাগান ও বারান্দার জন্য ৯৮% জার্মিনেশন গ্যারান্টি সহ ১০টি প্রিমিয়াম জাতের বিদেশি ও দেশি ফুলের বীজ কম্বো। ক্যাশ অন ডেলিভারি ও দ্রুত হোম ডেলিভারি।',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://greenagribd.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'গ্রীন এগ্রি বিডি | ১০ প্রজাতির প্রিমিয়াম ফুলের বীজ কম্বো প্যাক',
-    description: 'ছাদবাগান ও বারান্দার জন্য ৯৮% জার্মিনেশন গ্যারান্টি সহ ১০টি প্রিমিয়াম জাতের ফুলের বীজ কম্বো। সাথে ফ্রি উপহার ও ক্যাশ অন ডেলিভারি!',
+    title: 'FloraMax 10-in-1 ফুলের বীজ কম্বো | Green Agri BD',
+    description: 'ছাদবাগান ও বারান্দার জন্য ৯৮% জার্মিনেশন গ্যারান্টি সহ ১০টি প্রিমিয়াম জাতের বিদেশি ও দেশি ফুলের বীজ কম্বো। ক্যাশ অন ডেলিভারি ও দ্রুত হোম ডেলিভারি।',
+    url: '/',
+    siteName: 'Green Agri BD',
+    locale: 'bn_BD',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'FloraMax 10-in-1 প্রিমিয়াম ফুলের বীজ কম্বো প্যাক',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'গ্রীন এগ্রি বিডি | ১০ প্রজাতির প্রিমিয়াম ফুলের বীজ কম্বো প্যাক',
+    title: 'FloraMax 10-in-1 ফুলের বীজ কম্বো | Green Agri BD',
     description: 'ছাদবাগান ও বারান্দার জন্য ৯৮% জার্মিনেশন গ্যারান্টি সহ ১০টি ফুলের বীজ কম্বো প্যাক।',
+    images: ['/og-image.jpg'],
   },
 };
 

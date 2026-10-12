@@ -65,7 +65,7 @@ const PACKAGES: Record<'Pack 1' | 'Pack 2' | 'Pack 3', PackConfig> = {
     legacyId: 'single',
     name: 'Pack 1 (Trial Pack)',
     title: '১ প্যাক (ট্রায়াল প্যাক)',
-    subtitle: '১০টি জাতের ১০ প্যাকেট বীজ',
+    subtitle: '১০টি পৃথক জিপার প্যাকেট (+৳৮০ ডেলিভারি চার্জ)',
     basePrice: 280,
     delivery: {
       'Inside Dhaka': 80,
@@ -77,7 +77,7 @@ const PACKAGES: Record<'Pack 1' | 'Pack 2' | 'Pack 3', PackConfig> = {
     legacyId: 'double',
     name: 'Pack 2 (Double Combo)',
     title: '২ প্যাক (ডাবল কম্বো)',
-    subtitle: 'একই ১০ জাতের ২০ প্যাকেট • ফ্রি ডেলিভারি',
+    subtitle: '১০ জাতের ২০টি জিপার প্যাকেট • ফ্রি ডেলিভারি',
     basePrice: 499,
     delivery: {
       'Inside Dhaka': 0,
@@ -91,7 +91,7 @@ const PACKAGES: Record<'Pack 1' | 'Pack 2' | 'Pack 3', PackConfig> = {
     legacyId: 'triple',
     name: 'Pack 3 (Mega Combo)',
     title: '৩ প্যাক (মেগা কম্বো)',
-    subtitle: '১০ জাতের ৩০ প্যাকেট • ফ্রি ডেলিভারি',
+    subtitle: '১০ জাতের ৩০টি জিপার প্যাকেট • ফ্রি ডেলিভারি',
     basePrice: 650,
     delivery: {
       'Inside Dhaka': 0,
@@ -398,7 +398,14 @@ export const CheckoutForm: React.FC = () => {
             id="phone"
             type="tel"
             inputMode="numeric"
-            {...register('phone')}
+            maxLength={11}
+            {...register('phone', {
+              onChange: (e) => {
+                // Ensure only numbers are typed and max 11 chars
+                const val = e.target.value.replace(/\D/g, '').slice(0, 11);
+                e.target.value = val;
+              },
+            })}
             placeholder="যেমন: 017XXXXXXXX বা 019XXXXXXXX"
             className={`w-full px-3.5 py-2.5 text-base sm:text-sm rounded-lg border font-sans-bengali transition-colors outline-none ${
               errors.phone
@@ -593,16 +600,9 @@ export const CheckoutForm: React.FC = () => {
           )}
         </button>
 
-        <div className="mt-3 flex items-center justify-center gap-4 text-[11px] text-stone-500 font-sans-bengali text-center">
-          <span className="flex items-center gap-1">
-            <Lock className="w-3.5 h-3.5 text-stone-400" />
-            <span>১০০% নিরাপদ চেকআউট</span>
-          </span>
-          <span>•</span>
-          <span className="flex items-center gap-1">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#006c48]" />
-            <span>প্যাকেট হাতে পেয়ে টাকা দিন</span>
-          </span>
+        <div className="mt-3 flex items-center justify-center gap-2 text-xs text-stone-600 font-sans-bengali text-center font-medium bg-emerald-50/70 border border-emerald-200/80 rounded-lg py-2 px-3">
+          <ShieldCheck className="w-4 h-4 text-[#006c48] shrink-0" />
+          <span>ক্যাশ অন ডেলিভারি • পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন</span>
         </div>
       </div>
     </form>

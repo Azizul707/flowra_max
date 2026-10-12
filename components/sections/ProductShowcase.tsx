@@ -20,8 +20,8 @@ export const ProductShowcase: React.FC = () => {
             </h2>
           </div>
 
-          <div className="text-xs text-stone-500 font-sans-bengali bg-white px-3 py-1.5 rounded-lg border border-[#e3dfd5] self-start md:self-auto">
-            প্রতিটি জাত প্রায় ০.৫ গ্রাম (+/-) এয়ারটাইট প্যাকেজিং
+          <div className="text-xs text-stone-600 font-sans-bengali bg-white px-3.5 py-1.5 rounded-lg border border-[#e3dfd5] self-start md:self-auto font-medium shadow-xs">
+            ১০টি পৃথক জিপার প্যাকেট • প্রতিটিতে ১টি জাত • এয়ারটাইট সিল করা
           </div>
         </div>
 
@@ -45,15 +45,16 @@ export const ProductShowcase: React.FC = () => {
                 >
                   <FlowerVisual
                     id={
-                      item.id === 1 ? 'marigold' :
-                      item.id === 2 ? 'zinnia' :
-                      item.id === 3 ? 'sunflower' :
-                      item.id === 4 ? 'calendula' :
-                      item.id === 5 ? 'cosmos' :
-                      item.id === 6 ? 'sunflower' :
-                      item.id === 7 ? 'dianthus' :
-                      item.id === 8 ? 'sunflower' :
-                      item.id === 9 ? 'morning-glory' : 'petunia'
+                      item.id === 1 ? 'dianthus' : // Vinca/Periwinkle
+                      item.id === 2 ? 'zinnia' :   // Zinnia
+                      item.id === 3 ? 'petunia' :  // Portulaca
+                      item.id === 4 ? 'marigold' : // French Marigold
+                      item.id === 5 ? 'cosmos' :   // Cosmos
+                      item.id === 6 ? 'sunflower' :// Dwarf Sunflower
+                      item.id === 7 ? 'dahlia' :   // Dahlia
+                      item.id === 8 ? 'calendula' :// Calendula
+                      item.id === 9 ? 'morning-glory' : // Morning Glory
+                      'butterfly-pea'              // Balsam
                     }
                     name={item.name}
                     size="sm"

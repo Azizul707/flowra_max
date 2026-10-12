@@ -54,7 +54,7 @@ export const HeroSection: React.FC = () => {
 
             {/* 3. Sub-headline */}
             <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-sans-bengali">
-              নয়নতারা, জিনিয়া, পর্তুলিকা, ফ্রেঞ্চ গাঁদা, কসমস, সানগোল্ড, দোলনচাঁপা, সূর্যমুখী, মর্নিং গ্লোরি ও গম—এক প্যাকেট ১০ রকম ফুলের বীজ।
+              নয়নতারা, জিনিয়া, পর্তুলিকা (টাইম ফুল), ফ্রেঞ্চ গাঁদা, কসমস, ডোয়ার্ফ সূর্যমুখী, ডালিয়া, ক্যালেন্ডুলা, মর্নিং গ্লোরি ও দোপাট্টি (বালসাম)—১০টি পৃথক জিপার প্যাকেটে ১০ রকম প্রিমিয়াম জাতের বীজ।
             </p>
 
             {/* 4. Info Box */}
@@ -121,7 +121,7 @@ export const HeroSection: React.FC = () => {
                   src="/flower-combo.jpg"
                   alt="১০ রকম ফুলের বীজ - অরিজিনাল সিড প্যাক"
                   fill
-                  sizes="(max-width: 768px) 100vw, 500px"
+                  sizes="(max-width: 768px) 100vw, 600px"
                   className="object-cover rounded-xl"
                   priority
                 />
@@ -139,7 +139,7 @@ export const HeroSection: React.FC = () => {
                 <div className="absolute bottom-2.5 left-2.5 right-2.5 z-10">
                   <div className="w-full bg-white/95 backdrop-blur-md text-[#1b1c1a] py-1.5 px-3 rounded-lg flex items-center justify-center gap-1.5 text-xs font-bold font-sans-bengali shadow-sm border border-white/60">
                     <Package className="w-3.5 h-3.5 text-[#006c48]" />
-                    <span>প্রতিটি প্যাকেটে ১০টি জাত (১.৫ গ্রাম +/-)</span>
+                    <span>১০টি পৃথক জিপার প্যাকেট (প্রতিটিতে ১টি জাত, এয়ারটাইট সিল)</span>
                   </div>
                 </div>
 
