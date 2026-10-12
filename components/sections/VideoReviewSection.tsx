@@ -54,6 +54,7 @@ export const VideoReviewSection: React.FC = () => {
                 title="Green Agri Customer Video Review"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
+                loading="lazy"
               />
             </div>
           </div>

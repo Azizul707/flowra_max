@@ -123,7 +123,8 @@ export const HeroSection: React.FC = () => {
                   fill
                   sizes="(max-width: 768px) 100vw, 600px"
                   className="object-cover rounded-xl"
-                  priority
+                  priority={true}
+                  fetchPriority="high"
                 />
 
                 {/* Overlays / Badges */}

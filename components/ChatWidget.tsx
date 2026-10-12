@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import NextImage from 'next/image';
 import Markdown from 'react-markdown';
 import {
   MessageCircle,
@@ -445,10 +446,11 @@ export function ChatWidget() {
             <div className="flex items-center gap-2.5 min-w-0">
               <div className="relative flex items-center justify-center shrink-0">
                 <div className="w-8 h-8 rounded-full overflow-hidden border border-emerald-100/50 shadow-xs bg-white flex items-center justify-center shrink-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <NextImage
                     src="/logo.png"
                     alt="GreenAgri"
+                    width={32}
+                    height={32}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -502,10 +504,11 @@ export function ChatWidget() {
                 >
                   {!isUser && (
                     <div className="w-7 h-7 rounded-full overflow-hidden border border-emerald-100 shadow-xs shrink-0 mt-0.5 bg-white flex items-center justify-center">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <NextImage
                         src="/logo.png"
                         alt="GreenAgri"
+                        width={28}
+                        height={28}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -581,10 +584,11 @@ export function ChatWidget() {
             {isLoading && (
               <div className="flex items-start gap-2">
                 <div className="w-7 h-7 rounded-full overflow-hidden border border-emerald-100 shadow-xs shrink-0 mt-0.5 bg-white flex items-center justify-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <NextImage
                     src="/logo.png"
                     alt="GreenAgri"
+                    width={28}
+                    height={28}
                     className="w-full h-full object-cover"
                   />
                 </div>
